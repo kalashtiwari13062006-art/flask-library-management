@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}View Books{% endblock %}
+
+{% block content %}
+
+<div class="table-box">
+
+    <h2>📖 Issued Books</h2>
+
+    <p>All issued book records</p>
+
+
+    {% if books %}
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Book ID</th>
+
+                <th>Book Name</th>
+
+                <th>Book Number</th>
+
+                <th>Student Name</th>
+
+                <th>Issue Date</th>
+
+                <th>Due Date</th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+            {% for book in books %}
+
+            <tr>
+
+                <td>
+                    {{ book["book_id"] }}
+                </td>
+
+                <td>
+                    {{ book["book_name"] }}
+                </td>
+
+                <td>
+                    {{ book["book_number"] }}
+                </td>
+
+                <td>
+                    {{ book["student_name"] }}
+                </td>
+
+                <td>
+                    {{ book["issue_date"] }}
+                </td>
+
+                <td>
+                    {{ book["due_date"] }}
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    {% else %}
+
+    <div class="empty">
+        No books have been issued yet.
+    </div>
+
+    {% endif %}
+
+
+    <br>
+
+    <a href="{{ url_for('dashboard') }}"
+       class="btn blue">
+        Back to Dashboard
+    </a>
+
+</div>
+
+{% endblock %}

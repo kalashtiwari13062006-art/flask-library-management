@@ -1,0 +1,5 @@
+myflask/
+__pycache__/
+*.pyc
+.env
+library.db

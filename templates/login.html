@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<div class="form-box">
+
+    <h2>🔐 Login</h2>
+
+    <p>Login to your library account</p>
+
+
+    <form method="POST">
+
+        <label>Username</label>
+
+        <input
+            type="text"
+            name="username"
+            placeholder="Enter username"
+            required
+        >
+
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Enter password"
+            required
+        >
+
+
+        <button class="btn blue full">
+            Login
+        </button>
+
+    </form>
+
+
+    <p class="bottom-text">
+
+        Don't have an account?
+
+        <a href="{{ url_for('signup') }}">
+            Sign Up
+        </a>
+
+    </p>
+
+</div>
+
+{% endblock %}

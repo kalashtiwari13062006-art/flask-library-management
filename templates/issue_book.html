@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block title %}Issue Book{% endblock %}
+
+{% block content %}
+
+<div class="form-box large">
+
+    <h2>📚 Issue Book</h2>
+
+    <p>Enter book and student details</p>
+
+
+    <form method="POST">
+
+        <div class="grid">
+
+            <div>
+
+                <label>Book ID</label>
+
+                <input
+                    type="text"
+                    name="book_id"
+                    placeholder="Enter Book ID"
+                    required
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>Book Name</label>
+
+                <input
+                    type="text"
+                    name="book_name"
+                    placeholder="Enter Book Name"
+                    required
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>Book Number</label>
+
+                <input
+                    type="text"
+                    name="book_number"
+                    placeholder="Example: B001"
+                    required
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>Name of Student</label>
+
+                <input
+                    type="text"
+                    name="student_name"
+                    placeholder="Enter Student Name"
+                    required
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>Issue Date</label>
+
+                <input
+                    type="date"
+                    name="issue_date"
+                    required
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>Due Date</label>
+
+                <input
+                    type="date"
+                    name="due_date"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <button class="btn blue full">
+            Submit
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}

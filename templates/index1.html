@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <h1>Simple Calculator</h1>
+
+    <form method="POST">
+
+        <input type="number" name="a" placeholder="Enter first number" required>
+
+        <br><br>
+
+        <input type="number" name="b" placeholder="Enter second number" required>
+
+        <br><br>
+
+        <select name="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="%">%</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Calculate</button>
+
+    </form>
+
+    {% if answer is not none %}
+        <h2>Answer = {{ answer }}</h2>
+    {% endif %}
+
+</body>
+</html>

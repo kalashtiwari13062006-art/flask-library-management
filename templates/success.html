@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Success{% endblock %}
+
+{% block content %}
+
+<div class="success-box">
+
+    <div class="success-icon">
+        ✓
+    </div>
+
+    <h2>
+        Book Issued Successfully!
+    </h2>
+
+
+    <div class="details">
+
+        <p>
+            <b>Book Name:</b>
+            {{ book["book_name"] }}
+        </p>
+
+        <p>
+            <b>Book Number:</b>
+            {{ book["book_number"] }}
+        </p>
+
+        <p>
+            <b>Student Name:</b>
+            {{ book["student_name"] }}
+        </p>
+
+        <p>
+            <b>Issue Date:</b>
+            {{ book["issue_date"] }}
+        </p>
+
+        <p>
+            <b>Due Date:</b>
+            {{ book["due_date"] }}
+        </p>
+
+    </div>
+
+
+    <div class="buttons">
+
+        <a href="{{ url_for('dashboard') }}"
+           class="btn blue">
+            Dashboard
+        </a>
+
+        <a href="{{ url_for('books') }}"
+           class="btn purple">
+            View Books
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="dashboard">
+
+    <h1>
+        Welcome, {{ name }} 👋
+    </h1>
+
+    <p>
+        Library Management Dashboard
+    </p>
+
+
+    <div class="cards">
+
+        <a href="{{ url_for('issue_book') }}"
+           class="dashboard-card green">
+
+            <span>📚</span>
+
+            <h2>
+                Issue Book
+            </h2>
+
+            <p>
+                Submit a new book issue record
+            </p>
+
+        </a>
+
+
+        <a href="{{ url_for('books') }}"
+           class="dashboard-card purple">
+
+            <span>📖</span>
+
+            <h2>
+                View Books
+            </h2>
+
+            <p>
+                View all issued books
+            </p>
+
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}
